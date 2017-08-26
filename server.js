@@ -1,6 +1,7 @@
 ﻿const express = require('express');
 const mongoose = require('mongoose');
 const config = require('./config/database');
+const path = require('path');
 
 const app = express();
 
@@ -21,8 +22,10 @@ mongoDB
         console.log('Could not connect to ' + config.db + '. ' + '\n', err);
     });
 
-app.get('/', (req, res) => {
-    res.send('Hello World!');
+app.use(express.static(__dirname + 'client/dist'));
+
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname + 'client/dist/index.html'));
 })
 
 app.listen(port, () => {
