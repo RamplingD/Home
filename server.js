@@ -11,22 +11,26 @@ const db_port = 27017;
 
 // Connect to database
 mongoose.Promise = global.Promise;
-const mongoDB = mongoose.connect(config.uri, {
+
+const options = {
     useMongoClient: true
-});
+}
+const mongoDB = mongoose.connect(config.uri);
 
 mongoDB
     .then( (db) => {
         console.log('Successfully connected to: ' + config.db);
     })
-    .catch( (err) => {
+    .catch((err) => {
+        console.log(config.uri);
         console.log('Could not connect to ' + config.db + '. ' + '\n', err);
     });
 
-app.use(express.static(__dirname + 'client/dist'));
+// Static
+app.use(express.static(__dirname + '/dist'));
 
 app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname + 'client/dist/index.html'));
+    res.sendFile(path.join(__dirname + '/dist/index.html'));
 })
 
 app.listen(port, () => {
