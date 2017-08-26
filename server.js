@@ -2,6 +2,7 @@
 const mongoose = require('mongoose');
 const config = require('./config/database');
 const path = require('path');
+const bodyParser = require('body-parser'); // Delete if not used later...
 
 const app = express();
 
