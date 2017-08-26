@@ -9,15 +9,17 @@ const db_port = 27017;
 
 // Connect to database
 mongoose.Promise = global.Promise;
-mongoose.connect(config.uri, (err) => {
-    if (err) {
-        console.log('Could not connect to database:' + err);
-    }
-
-    else {
-        console.log("Successfully connected to database: " + config.db);
-    }
+const mongoDB = mongoose.connect(config.uri, {
+    useMongoClient: true
 });
+
+mongoDB
+    .then( (db) => {
+        console.log('Successfully connected to: ' + config.db);
+    })
+    .catch( (err) => {
+        console.log('Could not connect to ' + config.db + '. ' + '\n', err);
+    });
 
 app.get('/', (req, res) => {
     res.send('Hello World!');
