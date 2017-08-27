@@ -1,15 +1,18 @@
-﻿import { NgModule }           from '@angular/core';
+﻿import { NgModule }                 from '@angular/core';
 import {
     RouterModule,
     Routes
-}                             from '@angular/router';
+}                                   from '@angular/router';
 
-import { DashboardComponent } from './components/dashboard/dashboard.component'
-import { HomeComponent }      from './components/home/home.component'
+
+import { AuthenticationComponent }  from './components/authentication/authentication.component';
+import { CoverComponent }           from './components/cover/cover.component';
+import { HomeComponent }            from './components/home/home.component';
 
 const appRoutes: Routes = [
-    { path: '', component: HomeComponent },
-    { path: 'dashboard', component: DashboardComponent },
+    { path: '', component: CoverComponent },
+    { path: 'authentication', component: AuthenticationComponent },
+    { path: 'home', component: HomeComponent },
     { path: '**', component: HomeComponent }
 ]
 
