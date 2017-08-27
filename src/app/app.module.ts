@@ -12,39 +12,41 @@ import { DashboardComponent }       from './components/dashboard/dashboard.compo
 import { AuthenticationComponent }  from './components/authentication/authentication.component';
 import { MessengerComponent }       from './components/messenger/messenger.component';
 import { CoverComponent }           from './components/cover/cover.component';
-import { ContactComponent } from './components/contact/contact.component';
-import { LearnMoreComponent } from './components/learn-more/learn-more.component';
-import { RegisterComponent } from './components/register/register.component';
-import { LoginComponent } from './components/login/login.component';
-import { RegisterFormComponent } from './components/register-form/register-form.component';
+import { ContactComponent }         from './components/contact/contact.component';
+import { LearnMoreComponent }       from './components/learn-more/learn-more.component';
+import { RegisterComponent }        from './components/register/register.component';
+import { LoginComponent }           from './components/login/login.component';
+import { RegisterFormComponent }    from './components/register-form/register-form.component';
+import { NotFoundComponent }        from './components/not-found/not-found.component';
 
 @NgModule({
-  declarations: [
-      AppComponent,
-      NavigationComponent,
-      HomeComponent,
-      DashboardComponent,
-      AuthenticationComponent,
-      MessengerComponent,
-      CoverComponent,
-      ContactComponent,
-      LearnMoreComponent,
-      RegisterComponent,
-      LoginComponent,
-      RegisterFormComponent
-  ],
-  imports: [
-      AppRoutingModule,
-      BrowserModule,
-      FormsModule,
-      HttpModule
-  ],
-  providers: [
+    declarations: [
+        AppComponent,
+        NavigationComponent,
+        HomeComponent,
+        DashboardComponent,
+        AuthenticationComponent,
+        MessengerComponent,
+        CoverComponent,
+        ContactComponent,
+        LearnMoreComponent,
+        RegisterComponent,
+        LoginComponent,
+        RegisterFormComponent,
+        NotFoundComponent
+    ],
+    imports: [
+        AppRoutingModule,
+        BrowserModule,
+        FormsModule,
+        HttpModule
+    ],
+    providers: [
 
-  ],
-  bootstrap: [
-      AppComponent
-  ]
+    ],
+    bootstrap: [
+        AppComponent
+    ]
 })
 
 export class AppModule { }
