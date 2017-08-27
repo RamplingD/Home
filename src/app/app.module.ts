@@ -12,6 +12,11 @@ import { DashboardComponent }       from './components/dashboard/dashboard.compo
 import { AuthenticationComponent }  from './components/authentication/authentication.component';
 import { MessengerComponent }       from './components/messenger/messenger.component';
 import { CoverComponent }           from './components/cover/cover.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { LearnMoreComponent } from './components/learn-more/learn-more.component';
+import { RegisterComponent } from './components/register/register.component';
+import { LoginComponent } from './components/login/login.component';
+import { RegisterFormComponent } from './components/register-form/register-form.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +27,11 @@ import { CoverComponent }           from './components/cover/cover.component';
       AuthenticationComponent,
       MessengerComponent,
       CoverComponent,
+      ContactComponent,
+      LearnMoreComponent,
+      RegisterComponent,
+      LoginComponent,
+      RegisterFormComponent
   ],
   imports: [
       AppRoutingModule,
