@@ -3,15 +3,14 @@
     OnInit
 }                           from '@angular/core';
 
-import { fadeInAnimation }  from '../../animations/index';
+import { routerTransition }  from '../../animations/index';
 
 @Component({
     moduleId: module.id.toString(),
     selector: 'app-cover',
-    animations: [ fadeInAnimation ],
+    animations: [ routerTransition ],
     templateUrl: './cover.component.html',
     styleUrls: ['./cover.component.css'],
-    host: { '[@fadeInAnimation]': '' }
 })
 export class CoverComponent implements OnInit {
 
